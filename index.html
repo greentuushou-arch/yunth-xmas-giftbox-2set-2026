@@ -352,6 +352,17 @@ sup{font-size:clamp(9px,.4em,13px);font-weight:500;vertical-align:super;line-hei
   .btn{font-size:19px;letter-spacing:.04em}
   .mbox{width:76px}
 }
+@media (max-width:374px){
+  .pairs{gap:34px 10px}
+  .pair__boxes{gap:5px}
+  .mbox{width:64px;height:56px}.mbox:nth-child(2){height:70px}
+  .mbox .logo{width:32px}
+  .mbox b{padding:1px 6px;letter-spacing:0}
+  .mbox i{padding:0 4px;font-size:14px}
+  .lead .nw:first-child,.pairs-note .nw,.calc__mix .nw{white-space:normal}
+  .pair__cap{font-size:17px;letter-spacing:0}
+  .pair__txt{font-size:14px;letter-spacing:0}
+}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .pair{opacity:1;transform:none}
