@@ -571,7 +571,7 @@ sup{font-size:clamp(9px,.4em,13px);font-weight:500;vertical-align:super;line-hei
 <script>
 (function(){
   // 差し替え用: クーポンURLが決まったら COUPON_URL に入れる(空のあいだはクーポン枠へ移動)
-  var COUPON_URL = '';
+  var COUPON_URL = 'https://coupon.rakuten.co.jp/getCoupon?getkey=UVpWUS1TVEhWLVFQNlUtTDNMRw--&rt=';
   var ITEM_URL = 'https://item.rakuten.co.jp/yunth/ys-r178/';
   var POST_URL = 'https://item.rakuten.co.jp/yunth/ys-r065/';
   var START = new Date('2026-12-01T00:00:00+09:00').getTime();
@@ -602,7 +602,7 @@ sup{font-size:clamp(9px,.4em,13px);font-weight:500;vertical-align:super;line-hei
 
   document.querySelectorAll('[data-item]').forEach(function(a){a.href=ITEM_URL;a.target='_blank';a.rel='noopener'});
   document.querySelectorAll('[data-post]').forEach(function(a){a.href=POST_URL;a.target='_blank';a.rel='noopener'});
-  document.querySelectorAll('[data-coupon]').forEach(function(a){a.href=COUPON_URL||'#coupon'});
+  document.querySelectorAll('[data-coupon]').forEach(function(a){a.href=COUPON_URL||'#coupon';if(COUPON_URL){a.target='_blank';a.rel='noopener'}});
 
   // メニュー(セクションの data-title から作る)
   var secs=[].slice.call(document.querySelectorAll('section[data-title]'));
